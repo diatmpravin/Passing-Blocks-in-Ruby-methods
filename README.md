@@ -18,9 +18,9 @@ Ruby's yield statement gives control to a user specified block from the method's
 
 OutPut:
 
-You are in the block
-You are in the method test
-You are in the block
+    You are in the block
+    You are in the method test
+    You are in the block
 
 Even we  can pass parameters with the yield statement.
 
@@ -33,9 +33,9 @@ Even we  can pass parameters with the yield statement.
 
 OutPut:
 
-You are in the block 5 and 10
-You are in the method test
-You are in the block 100 and 200
+    You are in the block 5 and 10
+    You are in the method test
+    You are in the block 100 and 200
 
 ##2. Proc
 
@@ -50,7 +50,9 @@ something {|i| i.foo } and  something(&:foo)
        puts "You are in the method test"
        yield 100,200
     end
-OR
+    
+###OR
+   
     def test(&b)
        p b    
        b.call(10,20)
@@ -62,8 +64,8 @@ OR
 
 Output:
 
-You are in the block 10 and 20
-You are in the method test
-You are in the block 100 and 200
+    You are in the block 10 and 20
+    You are in the method test
+    You are in the block 100 and 200
 
 I hope, it will give sense of how ruby methods call blocks and yield.
